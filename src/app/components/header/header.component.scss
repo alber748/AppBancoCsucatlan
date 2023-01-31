@@ -206,6 +206,14 @@
 }
 /* Medias Queries Header */
 
+@media (max-width: 1366px) {
+
+    .modal-tarjetas {
+        left: 300px;
+    }
+
+}
+
 @media (max-width: 1024px) {
 
     .menu-web {
