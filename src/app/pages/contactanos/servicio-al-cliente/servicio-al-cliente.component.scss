@@ -1,0 +1,33 @@
+.container-fluid {
+    max-width: 1400px !important;
+
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+
+    .row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+
+        .col {
+            flex: 1 0 0%;
+        }
+        .text-center {
+            text-align: center;
+
+            .bc-text-p3{
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 22px;
+                color: #01426a;
+            }
+        }
+    }
+}

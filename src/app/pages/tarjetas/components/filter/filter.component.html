@@ -1,0 +1,28 @@
+<div class="general-filter__container">
+    <div id="filter-carousel-section" class="general-filter">
+        <div class="general-filter__item" (click)="changeCards(itemFilter1)" #itemFilter1>
+            <!---->
+            <div>MultiPremios</div>
+        </div>
+        <div class="general-filter__item" (click)="changeCards(itemFilter2)" #itemFilter2>
+            <!---->
+            <div>LifeMiles</div>
+        </div>
+        <div class="general-filter__item" (click)="changeCards(itemFilter3)" #itemFilter3>
+            <!---->
+            <div>Otros</div>
+        </div>
+        <div class="general-filter__item" (click)="changeCards(itemFilter4)" #itemFilter4>
+            <!---->
+            <div>Todas</div>
+        </div>
+    </div>
+</div>
+<div class="filter__select">
+    <select id="filter-carousel-section-mobile" class="ng-pristine ng-valid ng-touched">
+        <option value="MultiPremios" class="ng-star-inserted"> MultiPremios </option>
+        <option value="LifeMiles" class="ng-star-inserted"> LifeMiles </option>
+        <option value="Otros" class="ng-star-inserted"> Otros </option>
+        <option value="Todas" class="ng-star-inserted"> Todas </option>
+    </select>
+</div>

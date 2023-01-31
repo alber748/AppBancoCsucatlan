@@ -1,0 +1,197 @@
+<div class="container menu-mobile">
+    <mat-toolbar class="mat-toolbar mat-toolbar-multiple-rows">
+        <mat-toolbar-row class="mat-toolbar-row">
+            <a class="d-flex mr-1 router-link-active" href="/" routerLink="/home"><img alt="Banco Cuscatlán"
+                    src="https://multimedia.bancocuscatlan.com/assets/images/logos_svg/Logo-Cusca-Header.svg">
+            </a>
+            <a class="menu">
+                <span class="material-symbols-outlined icon-menu icon-menu-active" (click)="showMenuMobile()">
+                    menu
+                </span>
+                <span class="material-symbols-outlined icon-menu" (click)="showMenuMobile()">
+                    close
+                </span>
+            </a>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
+
+<div class="options-mobile" #menuMobile>
+    <div class="container-btn pt-1 pb-2"> 
+        <app-button-normal [titleBtn]=" 'Iniciar Sessión' "></app-button-normal> 
+        <app-btn-download ></app-btn-download>
+    </div>
+    <div class="container-options-link mt-5">
+        <div class="link-options-mobile">
+            <div class="container-link">
+                <a>Persona</a>
+            </div>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    add_circle
+                </span>
+            </div>
+        </div>
+        <div class="link-options-mobile">
+            <div class="container-link">
+                <a>Tarjetas</a>
+            </div>
+            <div class="icon">
+                <span class="material-symbols-outlined icons icon-active icons-data-1" (click)="expandOptions( tarjeta1 )" #tarjeta1 data-tarjet="1">
+                    add_circle
+                </span>
+                <span class="material-symbols-outlined icons icons-data-1" (click)="expandOptions( tarjeta1 )" data-tarjet="1">
+                    do_not_disturb_on
+                    </span>
+            </div>
+            <div class="more-links" data-tarjet="1">
+                <div class="container-mobile-category">
+                    <a routerLink="/tarjetas/de-credito" >Tarjetas de Crédito</a>
+                </div>
+                <div class="container-mobile-category">
+                    <a routerLink="/tarjetas/debito" >Tarjetas de Debito</a>
+                </div>
+            </div>
+        </div>
+        <div class="link-options-mobile">
+            <div class="container-link">
+                <a>Empresa</a>
+            </div>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    add_circle
+                    </span>
+            </div>
+        </div>
+        <div class="link-options-mobile">
+            <div class="container-link">
+                <a>CUSCATLAN ORO</a>
+            </div>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    add_circle
+                    </span>
+            </div>
+        </div>
+        <div class="link-options-mobile">
+            <div class="container-link">
+                <a>Multipremios</a>
+            </div>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    add_circle
+                    </span>
+            </div>
+        </div>
+        <div class="link-options-mobile">
+            <div class="container-link">
+                <a>Contactanos</a>
+            </div>
+            <div class="icon">
+                <span class="material-symbols-outlined icons icon-active icons-data-5" (click)="expandOptions( tarjeta5 )" #tarjeta5 data-tarjet="5">
+                    add_circle
+                </span>
+                <span class="material-symbols-outlined icons icons-data-5" (click)="expandOptions( tarjeta5 )" data-tarjet="5">
+                    do_not_disturb_on
+                    </span>
+            </div>
+            <div class="more-links" data-tarjet="5">
+                <div class="container-mobile-category">
+                    <a routerLink="/contactanos/servicio-al-cliente" >Índice de Eficiencia Atención de Gestiones CUSCATLAN</a>
+                </div>
+            </div>
+        </div>
+        <div class="link-options-mobile">
+            <div class="container-link">
+               <a>YA</a> 
+            </div>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    add_circle
+                    </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container menu-web">
+    <mat-toolbar class="mat-toolbar mat-toolbar-multiple-rows">
+        <mat-toolbar-row class="mat-toolbar-row">
+            <a class="d-flex mr-1 router-link-active" href="/" routerLink="/home"><img alt="Banco Cuscatlán"
+                    src="https://multimedia.bancocuscatlan.com/assets/images/logos_svg/Logo-Cusca-Header.svg">
+            </a>
+            <span class="menu-top-spacer"></span>
+            <nav class="nav-top">
+                <ul class="header-menu">
+                    <li class="header-option"><a class="" href="/" routerLink="/" routerLinkActive="link-active"
+                            [routerLinkActiveOptions]="{ exact : true }"> Persona </a><!----><!---->
+                    </li>
+                    <li class="header-option modal-link" #tarjetasOption><a class="" href="/" routerLink="/tarjetas"
+                            routerLinkActive="link-active"> Tarjetas
+
+                        </a>
+                        <div class="modal-tarjetas">
+                            <h3 class="title-modal">Tarjetas > </h3>
+                            <hr>
+                            <div class="info-tarjetas">
+                                <ul>
+                                    <li> <a routerLink="/tarjetas/de-credito">Tarjetas de Credito ></a></li>
+                                    <li> <a routerLink="/tarjetas/debito">Tarjetas de Debito ></a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header-option"><a class="" href="/" routerLink="/empresa" routerLinkActive="link-active">
+                            Empresa </a><!----><!---->
+                    </li>
+                    <li class="header-option"><a class="" href="/" routerLink="/cuscatlan-oro"
+                            routerLinkActive="link-active"> CUSCATLAN ORO </a><!----><!---->
+                    </li>
+                    <li class="header-option"><a class="" href="/" routerLink="/multipremios"
+                            routerLinkActive="link-active"> Multipremios </a><!----><!---->
+                    </li>
+                    <li class="header-option"><a class="" href="/" routerLink="/contactanos/servicio-al-cliente"
+                            routerLinkActive="link-active"> Contáctanos </a><!----><!---->
+                    </li>
+                    <li class="header-option"><!---->
+                        <div routerlinkactive="router-link-active" class="logo-ya" tabindex="0"><img alt="YA"
+                                class="logo-ya-img"
+                                src="https://multimedia.bancocuscatlan.com/assets/images/logoYA/Productos-Digitales-YA.gif">
+                        </div><!---->
+                        <div class="container-category ng-star-inserted __lessLeft" style="display: none;"><!---->
+                            <div class="category pt-1">
+                                <div class="category-col ng-star-inserted">
+                                    <div class="sub-category ng-star-inserted">
+                                        <h4><!----><!----><a href="/productos-digitales" class="ng-star-inserted">
+                                                Productos
+                                                Digitales <em
+                                                    class="uil uil-angle-right-b"></em></a><!----><!----><!----><!----><!---->
+                                        </h4>
+                                        <ul class="internal-menu ng-star-inserted"><!----><!---->
+                                            <li class="ng-star-inserted"><a routerlinkactive="active"
+                                                    href="/productos-digitales/cuenta-ya"> Cuenta YA </a></li>
+                                            <!----><!----><!----><!----><!----><!----><!----><!---->
+                                            <li class="ng-star-inserted"><a routerlinkactive="active"
+                                                    href="/productos-digitales/extrafinanciamiento-en-linea"> Extra YA
+                                                </a>
+                                            </li><!----><!----><!----><!----><!----><!----><!----><!---->
+                                            <li class="ng-star-inserted"><a routerlinkactive="active"
+                                                    href="/productos-digitales/retiro-de-efectivo-en-linea"> Retiro de
+                                                    Efectivo YA </a></li>
+                                            <!----><!----><!----><!----><!----><!----><!----><!---->
+                                            <li class="ng-star-inserted"><a routerlinkactive="active"
+                                                    href="/productos-digitales/traslado-de-saldos-en-linea"> Traslado de
+                                                    Saldos YA </a></li><!----><!----><!----><!----><!----><!----><!---->
+                                        </ul><!---->
+                                    </div><!---->
+                                </div><!---->
+                            </div>
+                        </div>
+                    </li><!---->
+                    <li class="container-login-iframe"><app-button-normal [titleBtn]="titleBtn"></app-button-normal>
+                        <!----></li>
+                </ul>
+            </nav>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>

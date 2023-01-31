@@ -1,0 +1,20 @@
+.login-container{
+    background-color: #ffc600;
+    color: #01426a;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    min-height: 36px;
+    height: auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600 !important;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.login-container:hover{
+
+    background-color: #fcda6d;
+
+}
