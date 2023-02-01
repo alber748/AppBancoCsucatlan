@@ -45,3 +45,41 @@ body { margin: 0; font-family:"Monserrat", sans-serif; }
   --blue-liht-bc : #2c85bc;
 }
 
+
+.blue-bc {
+  background-color: rgb(1, 66, 106);
+}
+
+.dark-bc {
+  background-color: rgb(65, 65, 65);
+}
+
+.blue-grey-bc {
+  background-color: rgb(123, 129, 135);
+}
+.blue-light-bc {
+  background-color: rgb(1, 111, 183);
+}
+
+.swiper-wrapper {
+  width: 82% !important;
+  left: 5% !important;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  position: absolute;
+  height: 415px !important;
+  top: 40px !important;
+  display: flex;
+  align-items: center;
+  width: 54px !important;
+  justify-content: center;
+  background-color: #fff;
+  opacity: 50%;
+}
+.swiper-button-prev {
+  left: 0 !important;
+}
+.swiper-button-next {
+  right: 0!important;
+}

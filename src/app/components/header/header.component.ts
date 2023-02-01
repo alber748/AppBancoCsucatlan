@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit{
 
     menuElement.classList.toggle('options-menu-mobile-active');
 
-
     const iconsMenu = document.querySelectorAll('.icon-menu');
 
     iconsMenu.forEach(icon => {
@@ -33,7 +32,6 @@ export class HeaderComponent implements OnInit{
     });
 
   }
-
 
   changeIconMenu(  numberElement : string | null ){
 

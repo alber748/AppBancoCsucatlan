@@ -1,0 +1,14 @@
+<swiper
+    [slidesPerView]="6"
+    [grid]
+    [spaceBetween]="30"
+    [slidesPerGroup]="3"
+    [loop]="false "
+    [loopFillGroupWithBlank]="true"
+
+    [navigation]="true"
+    class="mySwiper"
+  >
+    <ng-template swiperSlide  *ngFor="let card of this.cards"> <app-image-debit-card [dataCards]="card"></app-image-debit-card> </ng-template>
+
+</swiper>

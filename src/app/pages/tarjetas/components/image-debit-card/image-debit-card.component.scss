@@ -1,0 +1,46 @@
+#card {
+    width: 278px;
+    height: 412px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+
+    img {
+        position: relative;
+        height: 85%;
+        z-index: 5;
+        left: -250px;
+        width: auto;
+    }
+}
+
+.card__image--small {
+    position: relative;
+    left: -25px;
+}
+
+#card:hover {
+
+    img {
+        position: relative;
+        left: -150px;
+    }
+
+}
+
+.card__title {
+    top: -55px;
+    position: relative;
+    text-align: left;
+    left: 10px;
+    color: #ffff;
+    font-size: 21px;
+    font-weight: 600;
+    span{
+        display: inline;
+        border-bottom: solid 2px #ffc600;;
+        width: auto;
+    }
+
+}
