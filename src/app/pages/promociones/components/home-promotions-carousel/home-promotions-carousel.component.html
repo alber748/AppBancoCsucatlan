@@ -1,0 +1,71 @@
+<div class="container">
+  <mat-stepper orientation="horizontal" linear labelPosition="bottom">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Elige un descuento</ng-template>
+        <p class="subtitulo">Elige el descuento que desees aplicar</p>
+        <div class="cards-options">
+          <div class="card option" *ngFor="let info of infoCards" [style]="info.imgFondo"
+            style="background-position: left; background-size: cover;" (click)="changeSelected( card )" #card>
+            <div class="img-container">
+              <img [src]="info.imgUrl" alt="img-bac">
+            </div>
+            <div class="description">
+              <p> {{ info.description }} </p>
+            </div>
+            <div class="cover"></div>
+            <div class="selected">
+              <p>Seleccionada</p>
+            </div>
+          </div>
+        </div>
+        <input matInput placeholder="Last name, First name" id="firtsInput" formControlName="firstCtrl" required hidden>
+        <div class="btn-container">
+          <button class="btn-app btn-next" matStepperNext><app-button-normal  [titleBtn]="titleBtn"></app-button-normal></button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup" style="margin-top: 50px;">
+        <ng-template matStepLabel>Reporta tu compra</ng-template>
+        <mat-form-field appearance="fill" style="width: 45%; margin: 10px;">
+            <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 45%; margin: 10px;">
+          <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="width: 45%; margin: 10px;">
+        <input matInput placeholder="Last name, First name" formControlName="fourCtrl" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill" style="width: 45%; margin: 10px;">
+      <input matInput placeholder="Last name, First name" formControlName="fiftCtrl" required>
+  </mat-form-field>
+  <div class="btn-container">
+    <button class="btn-app btn-next" matStepperPrevious><app-button-normal  [titleBtn]="'Atras'"></app-button-normal></button>
+    <button class="btn-app btn-next" matStepperNext><app-button-normal  [titleBtn]="titleBtn"></app-button-normal></button>
+  </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup" class="form-flex">
+        <ng-template matStepLabel>Terminos y condiciones</ng-template>
+        <div class="cards-politics">
+          <div class="title-politics">
+            <p>Terminos y condicoines</p>
+          </div>
+          <div class="description-politics">
+            <p>Politica de privacidad</p>
+          </div>
+          <div class="check">
+          <input type="radio"> <label> Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos informarte de estos cambios. <a>Ver términos y condiciones</a></label>
+
+          </div>
+        </div>
+      </form>
+    </mat-step>
+  </mat-stepper>
+
+</div>
+
+
+  

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WideCarouselComponent } from './wide-carousel.component';
+import { OtherComponentComponent } from './other-component.component';
 
-describe('WideCarouselComponent', () => {
-  let component: WideCarouselComponent;
-  let fixture: ComponentFixture<WideCarouselComponent>;
+describe('OtherComponentComponent', () => {
+  let component: OtherComponentComponent;
+  let fixture: ComponentFixture<OtherComponentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WideCarouselComponent ]
+      declarations: [ OtherComponentComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WideCarouselComponent);
+    fixture = TestBed.createComponent(OtherComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -20,6 +20,10 @@ const routes: Routes = [
     component : EmpresaComponent
   },
   {
+    path: 'promociones',
+    loadChildren : () => import( './pages/promociones/promociones.module' ).then( p => p.PromocionesModule )
+  },
+  {
     path: 'cuscatlan-oro',
     component : CuscatlanOroComponent
   },

@@ -1,0 +1,22 @@
+.container-fluid {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        margin-top: 25px;
+        
+        h1 {
+            font-size: 48px;
+            color: var( --secondary-color );
+        }
+    }
+}
+
+app-home-promotions-carousel {
+
+    width: 100%;
+
+}

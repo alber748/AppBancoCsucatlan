@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { debitCard } from '../../interfaces/debit-card-interface';
 import { TarjetasService } from '../../services/tarjetas.service';
 
@@ -10,13 +10,15 @@ import { TarjetasService } from '../../services/tarjetas.service';
 export class DeDebitoComponent implements OnInit{
 
   public cardsDebito! : debitCard[]
-  
+
   constructor( private tarjetasService : TarjetasService ){
 
   }
 
   ngOnInit() : void{
-    this.cardsDebito = this.tarjetasService.setCardsDebito();
+
+    this.cardsDebito = this.tarjetasService.cardsDebito;
   }
+
 
 }

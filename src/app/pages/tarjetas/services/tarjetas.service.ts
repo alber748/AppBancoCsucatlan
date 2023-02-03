@@ -13,21 +13,21 @@ export class TarjetasService {
       subtitulo : 'Multipremios',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Platinum.png',
       backgroundImg : 'blue-bc',
-      categoria : 'multipremios'
+      categoria : 'MultiPremios'
     },
     {
       title : 'Debito Oro ',
       subtitulo : 'CUSCATLAN',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Platinum-3.png',
       backgroundImg : 'dark-bc',
-      categoria : 'multipremios'
+      categoria : 'multiPremios'
     },
     {
       title : 'Debito Platinum ',
       subtitulo : 'CUSCATLAN',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Platinum-1.png',
       backgroundImg : 'blue-grey-bc',
-      categoria : 'multipremios'
+      categoria : 'MultiPremios'
     },
     {
       title : 'Debito LifeMiles CUSCATLAN',
@@ -48,14 +48,14 @@ export class TarjetasService {
       subtitulo : 'Recargable',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Platinum-4.png',
       backgroundImg : 'blue-light-bc',
-      categoria : 'otras'
+      categoria : 'Otras'
     },
     {
       title : 'Tarjeta Pago',
       subtitulo : 'CUSCATLAN',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Pago.png',
       backgroundImg : 'blue-bc',
-      categoria : 'otras'
+      categoria : 'Otras'
     }
   ]
 
@@ -65,21 +65,21 @@ export class TarjetasService {
       subtitulo : 'Multipremios',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Platinum.png',
       backgroundImg : 'blue-bc',
-      categoria : 'multipremios'
+      categoria : 'MultiPremios'
     },
     {
       title : 'Debito Oro ',
       subtitulo : 'CUSCATLAN',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Platinum-3.png',
       backgroundImg : 'dark-bc',
-      categoria : 'multipremios'
+      categoria : 'MultiPremios'
     },
     {
       title : 'Debito Platinum ',
       subtitulo : 'CUSCATLAN',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Platinum-1.png',
       backgroundImg : 'blue-grey-bc',
-      categoria : 'multipremios'
+      categoria : 'MultiPremios'
     },
     {
       title : 'Debito LifeMiles CUSCATLAN',
@@ -100,14 +100,14 @@ export class TarjetasService {
       subtitulo : 'Recargable',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Platinum-4.png',
       backgroundImg : 'blue-light-bc',
-      categoria : 'otras'
+      categoria : 'Otras'
     },
     {
       title : 'Tarjeta Pago',
       subtitulo : 'CUSCATLAN',
       imgUrl : 'https://multimedia.bancocuscatlan.com/assets/debito/Carrusel/Mastercard_Multipremios_Pago.png',
       backgroundImg : 'blue-bc',
-      categoria : 'otras'
+      categoria : 'Otras'
     }
   ]
 
@@ -117,4 +117,10 @@ export class TarjetasService {
   setCardsDebito() {
     return this.cardsDebito;
   }
+
+  filtradoCardsDebito( filter : string){
+    this.cardsDebito = this.cardsDebitoPermanente.filter(card => card.categoria === filter);
+    console.log( this.cardsDebito);
+  }
+
 }

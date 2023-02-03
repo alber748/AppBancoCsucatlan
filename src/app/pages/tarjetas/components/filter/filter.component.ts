@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Event } from '@angular/router';
+import { ActivatedRoute, Event, Router, RouterLink, RouterModule } from '@angular/router';
 import { TarjetasService } from '../../services/tarjetas.service';
+import { DeDebitoComponent } from '../../pages/de-debito/de-debito.component';
 
 @Component({
   selector: 'app-filter',
@@ -22,6 +23,11 @@ export class FilterComponent {
       el.classList.remove('item-filter-clicked');
     });
     element.classList.add( 'item-filter-clicked' );
+
+    const filter = element.getAttribute('filter');
+
+    this.tarjetasService.filtradoCardsDebito( filter! );
+
   }
 
 }

@@ -83,3 +83,43 @@ body { margin: 0; font-family:"Monserrat", sans-serif; }
 .swiper-button-next {
   right: 0!important;
 }
+
+.mat-horizontal-stepper-header-container {
+  position: relative;
+  left: 25%;
+  width: 50% !important;
+
+}
+
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-icon-selected, .mat-stepper-label-position-bottom .mat-horizontal-stepper-header  .mat-step-icon-state-edit{
+  background-color: var(--primary-color) ;
+} 
+
+.mat-step-icon {
+  border-radius: 50%;
+  height: 40px !important;
+  width: 40px !important;
+  flex-shrink: 0;
+  position: relative;
+  top: -7px;
+}
+
+.mat-step-label {
+  white-space: normal !important;
+  font-size: 15px;
+  color: #01426a !important;
+  font-weight: 400;
+}
+
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
+
+  width: 135px !important;
+
+}
+
+.mat-horizontal-stepper-content {
+
+  display: flex;
+  justify-content: center;
+
+}

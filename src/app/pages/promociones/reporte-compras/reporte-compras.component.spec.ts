@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageDebitCardComponent } from './image-debit-card.component';
+import { ReporteComprasComponent } from './reporte-compras.component';
 
-describe('ImageDebitCardComponent', () => {
-  let component: ImageDebitCardComponent;
-  let fixture: ComponentFixture<ImageDebitCardComponent>;
+describe('ReporteComprasComponent', () => {
+  let component: ReporteComprasComponent;
+  let fixture: ComponentFixture<ReporteComprasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImageDebitCardComponent ]
+      declarations: [ ReporteComprasComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ImageDebitCardComponent);
+    fixture = TestBed.createComponent(ReporteComprasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
