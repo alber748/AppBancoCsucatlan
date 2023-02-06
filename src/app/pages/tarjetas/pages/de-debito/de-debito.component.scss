@@ -18,16 +18,16 @@
 
 }
 
-
-// @media (max-width: 1024px) {
-//     section {
-//         margin-top: 50px;
-//     }
-
-// }
-
-
 .add {
     width: 100vh;
     height: 500px;
+}
+
+.container-card {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
 }

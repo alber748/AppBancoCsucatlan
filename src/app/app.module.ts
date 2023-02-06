@@ -9,7 +9,6 @@ import { PersonasComponent } from './pages/personas/personas.component';
 import { EmpresaComponent } from './pages/empresa/empresa.component';
 import { CuscatlanOroComponent } from './pages/cuscatlan-oro/cuscatlan-oro.component';
 import { MultipremiosComponent } from './pages/multipremios/multipremios.component';
-import { ReloadDirective } from './directives/reload.directive';
 
 
 @NgModule({
@@ -19,7 +18,6 @@ import { ReloadDirective } from './directives/reload.directive';
     EmpresaComponent,
     CuscatlanOroComponent,
     MultipremiosComponent,
-    ReloadDirective,
   ],
   imports: [
     BrowserModule,

@@ -45,9 +45,30 @@ body { margin: 0; font-family:"Monserrat", sans-serif; }
   --blue-liht-bc : #2c85bc;
 }
 
+.border-radius-15 {
+  border-radius: 15px;
+}
+
+.d-flex-bc {
+  display: flex;
+}
 
 .blue-bc {
   background-color: rgb(1, 66, 106);
+}
+
+.mt-15 {
+
+  margin-top: 15px;
+
+}
+
+.yellow-bc {
+  background-color: #ffc600;
+}
+
+.blue-20 {
+  color: #2c85bc !important;
 }
 
 .dark-bc {
@@ -121,5 +142,31 @@ body { margin: 0; font-family:"Monserrat", sans-serif; }
 
   display: flex;
   justify-content: center;
+
+}
+
+footer.bg-dark-blue {
+  color: #fff;
+  background: #002E4A;
+}
+
+
+@media (max-width: 1024px) {
+    
+
+  .mat-horizontal-stepper-header-container {
+    left: 10%;
+    width: 80% !important;
+  }
+
+}
+
+@media (max-width: 600px) {
+    
+
+  .mat-horizontal-stepper-header-container {
+    left: 0;
+    width: 100% !important;
+  }
 
 }

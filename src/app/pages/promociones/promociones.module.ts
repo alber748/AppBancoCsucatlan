@@ -4,7 +4,6 @@ import { HomeComponent } from './home/home.component';
 import { ReporteComprasComponent } from './reporte-compras/reporte-compras.component';
 import { PromocionesRoutingModule } from './promociones-routing.module';
 import { HomePromotionsCarouselComponent } from './components/home-promotions-carousel/home-promotions-carousel.component';
-import { OtherComponentComponent } from './components/other-component/other-component.component';
 import { MaterialModule } from '../../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from '../../components/components.module';
@@ -15,7 +14,6 @@ import { ComponentsModule } from '../../components/components.module';
     HomeComponent,
     ReporteComprasComponent,
     HomePromotionsCarouselComponent,
-    OtherComponentComponent
   ],
   imports: [
     CommonModule,

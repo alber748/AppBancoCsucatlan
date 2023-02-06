@@ -8,11 +8,10 @@
   position: relative;
 }
 
-
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
+  width: 295px;
 
   margin-right: 0 !important;
   margin-left: 0 !important;
@@ -40,4 +39,16 @@
 }
 app-image-debit-card {
   width: 100%;
+}
+
+
+@media (max-width: 600px){
+
+  .swiper-slide {
+
+    left: 55px !important;
+
+  }
+
+
 }

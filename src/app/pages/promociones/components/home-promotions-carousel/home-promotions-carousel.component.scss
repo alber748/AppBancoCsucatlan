@@ -19,7 +19,10 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
+
     .card {
+
         width: 214px;
         height: 214px;
         border-radius: 5px;
@@ -181,3 +184,92 @@ mat-stepper{
     width: 750px;
 }
 
+.input-group {
+    display: flex;
+    flex-flow: wrap;
+    max-width: 817px;
+
+
+    .input-container {
+
+        width: 45%; 
+        height: 38px;
+
+        padding: 5px;
+        margin: 12px;
+
+        border: 1px solid #AAAAAA;
+        border-radius: 10px;
+
+        .select-country {
+            border: none;
+            background-color: transparent; 
+        }
+
+        input{  
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            position: relative;
+            top: -17px;
+        }
+
+        label {
+            position: relative;
+            top: -15px;
+            margin-left: 5px;
+            font-size: 12px;
+            background-color: whitesmoke;
+            width: 120px;
+            text-align: center;
+            padding: 2px;
+            color: #696969;
+            font-weight: 600;
+        }
+
+        input:focus {
+
+            border: none;
+
+        }
+    }
+
+    .select-coun {
+        width: 15%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        .img-flag{
+            height: 50%;
+        }
+        select {
+            width: 95%;
+        }
+    }
+
+    .input-flag {
+
+        width: 26%;
+
+    }
+}
+
+
+.invalid {
+    border-color: #df1c24 !important;
+
+
+    label {
+
+        color: #df1c24 !important;
+
+    }
+}
+
+
+@media (max-width: 600px) {
+    
+
+}

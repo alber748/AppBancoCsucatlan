@@ -19,45 +19,82 @@
             </div>
           </div>
         </div>
-        <input matInput placeholder="Last name, First name" id="firtsInput" formControlName="firstCtrl" required hidden>
         <div class="btn-container">
-          <button class="btn-app btn-next" matStepperNext><app-button-normal  [titleBtn]="titleBtn"></app-button-normal></button>
+          <button class="btn-app btn-next" matStepperNext><app-button-normal titleBtn="Siguiente"></app-button-normal></button>
         </div>
       </form>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup" style="margin-top: 50px;">
+      <form [formGroup]="secondFormGroup" style="margin-top: 50px;" autocomplete="off">
         <ng-template matStepLabel>Reporta tu compra</ng-template>
-        <mat-form-field appearance="fill" style="width: 45%; margin: 10px;">
-            <input matInput placeholder="Last name, First name" formControlName="secondCtrl" required>
-        </mat-form-field>
-        <mat-form-field appearance="fill" style="width: 45%; margin: 10px;">
-          <input matInput placeholder="Last name, First name" formControlName="thirdCtrl" required>
-      </mat-form-field>
-      <mat-form-field appearance="fill" style="width: 45%; margin: 10px;">
-        <input matInput placeholder="Last name, First name" formControlName="fourCtrl" required>
-    </mat-form-field>
-    <mat-form-field appearance="fill" style="width: 45%; margin: 10px;">
-      <input matInput placeholder="Last name, First name" formControlName="fiftCtrl" required>
-  </mat-form-field>
-  <div class="btn-container">
-    <button class="btn-app btn-next" matStepperPrevious><app-button-normal  [titleBtn]="'Atras'"></app-button-normal></button>
-    <button class="btn-app btn-next" matStepperNext><app-button-normal  [titleBtn]="titleBtn"></app-button-normal></button>
-  </div>
+        <div class="input-group">
+
+          <!-- Nombre Completo -->
+          <div class="input-container" [ngClass]="secondFormGroup.controls.secondCtrl.errors && secondFormGroup.controls.secondCtrl.touched ? 'invalid' : 'valid' ">
+            <label class="label">Nombre Completo</label>
+            <input (input)="validarInputText( this.secondFormGroup.controls.secondCtrl )" class="input-second-form" matInput formControlName="secondCtrl" required #secondControl>
+            <p *ngIf="secondFormGroup.controls?.secondCtrl?.errors && secondFormGroup.controls?.secondCtrl?.touched" style="color: rgb(196, 20, 20); position: relative; top: -14px; margin: 0; margin-left: 15px; font-size: 13px; display: flex;" >Ingrese un nombre y un apellido</p>
+          </div>
+
+           <!-- DUI -->
+           <div class="input-container" [ngClass]="secondFormGroup.controls.thirdCtrl.errors && secondFormGroup.controls.thirdCtrl.touched ? 'invalid' : 'valid' ">
+            <label class="label">DUI</label>
+            <input (input)="validarInputNumber( this.secondFormGroup.controls.thirdCtrl )" class="input-second-form" matInput formControlName="thirdCtrl" required #thirdControl pattern="[0-9]+">
+            <p *ngIf="secondFormGroup.controls?.thirdCtrl?.errors && secondFormGroup.controls?.thirdCtrl?.touched" 
+            style="color: rgb(196, 20, 20); position: relative; top: -12px; margin: 0; margin-left: 15px; font-size: 13px; display: flex;" 
+            >Número de documento incompleto </p>
+          </div>
+
+          <!-- Country -->
+          <div class="input-container select-coun">
+            <img src="https://flagcdn.com/sv.svg" alt="bandera" width="30px" class="img-flag">
+            <select class="select-country">
+              <option value="2">502</option>
+              <option value="1" selected="true">503</option>
+              <option value="3" >504</option>
+              <option value="3" >505</option>
+              <option value="3" >506</option>
+              <option value="3" >507</option>
+            </select>
+          </div>
+
+           <!-- Phone Number -->
+           <div class="input-container input-flag" [ngClass]="secondFormGroup.controls.fourCtrl.errors && secondFormGroup.controls.fourCtrl.touched ? 'invalid' : 'valid' ">
+            <label class="label">Numero de telefono</label>
+            <input (input)="validarInputNumber( secondFormGroup.controls.fourCtrl )" class="input-second-form" matInput formControlName="fourCtrl" required #fourControl>
+            <p *ngIf="secondFormGroup.controls?.fourCtrl?.errors && secondFormGroup.controls?.fourCtrl?.touched" 
+            style="color: rgb(196, 20, 20); position: relative; top: -12px; margin: 0; margin-left: 15px; font-size: 13px; display: flex;" 
+            >Ingrese al menos 8 digitos </p>
+          </div>
+
+           <!-- Email -->
+           <div class="input-container" [ngClass]="secondFormGroup.controls.fiftCtrl.errors && secondFormGroup.controls.fiftCtrl.touched ? 'invalid' : 'valid' "  > 
+            <label class="label">Correo Electrónico</label>
+            <input class="input-second-form" matInput  formControlName="fiftCtrl" required #fiftCtrl>
+            <p *ngIf="secondFormGroup.controls?.fiftCtrl?.errors && secondFormGroup.controls?.fiftCtrl?.touched" 
+            style="color: rgb(196, 20, 20); position: relative; top: -12px; margin: 0; margin-left: 15px; font-size: 13px; display: flex;" 
+            >Ingrse una direccion de correo </p>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="btn-app" matStepperPrevious><app-button-normal  titleBtn="Atras"></app-button-normal></button>
+          <button class="btn-app" matStepperNext><app-button-normal  titleBtn="Siguiente"></app-button-normal></button>
+        </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
-      <form [formGroup]="thirdFormGroup" class="form-flex">
+    <mat-step>
+      <form class="form-flex">
         <ng-template matStepLabel>Terminos y condiciones</ng-template>
         <div class="cards-politics">
           <div class="title-politics">
-            <p>Terminos y condicoines</p>
+            <p>Terminos y condiciones</p>
           </div>
           <div class="description-politics">
             <p>Politica de privacidad</p>
+            <p>Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos informarte de estos cambios. <a>Ver términos y condiciones</a></p>
           </div>
           <div class="check">
-          <input type="radio"> <label> Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos informarte de estos cambios. <a>Ver términos y condiciones</a></label>
+          <input type="checkbox"><label>Acepto los terminos y condiciones</label>
 
           </div>
         </div>
@@ -68,4 +105,3 @@
 </div>
 
 
-  

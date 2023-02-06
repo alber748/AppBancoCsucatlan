@@ -7,9 +7,7 @@ import { RouterModule } from '@angular/router';
 import { SwiperHomeComponent } from './swiper-home/swiper-home.component';
 import { ModalHeaderComponent } from './modal-header/modal-header.component';
 import { BtnDownloadComponent } from './btn-download/btn-download.component';
-
-
-
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +15,8 @@ import { BtnDownloadComponent } from './btn-download/btn-download.component';
     ButtonNormalComponent,
     SwiperHomeComponent,
     ModalHeaderComponent,
-    BtnDownloadComponent
+    BtnDownloadComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +26,8 @@ import { BtnDownloadComponent } from './btn-download/btn-download.component';
   exports : [
     HeaderComponent,
     ButtonNormalComponent,
-    SwiperHomeComponent
+    SwiperHomeComponent,
+    FooterComponent
   ]
 })
 export class ComponentsModule { }

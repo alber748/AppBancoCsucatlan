@@ -15,6 +15,8 @@ import { ImageDebitCardComponent } from './components/image-debit-card/image-deb
 
 import { SwiperModule } from 'swiper/angular';
 import { SwiperComponent } from "swiper/angular";
+import { DebitCardDescriptionComponent } from './components/debit-card-description/debit-card-description.component';
+import { ListWhithLeftIconComponent } from './components/list-whith-left-icon/list-whith-left-icon.component';
 
 
 @NgModule({
@@ -25,11 +27,12 @@ import { SwiperComponent } from "swiper/angular";
         ElementSwiperComponent,
         FilterComponent,
         WideCarouselComponent,
-        ImageDebitCardComponent
+        ImageDebitCardComponent,
+        DebitCardDescriptionComponent,
+        ListWhithLeftIconComponent
     ],
     imports: [
         CommonModule,
-        
         TarjetasRoutingModule,
         MaterialModule,
         ComponentsModule,

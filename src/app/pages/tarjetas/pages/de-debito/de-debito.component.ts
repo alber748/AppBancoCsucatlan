@@ -16,7 +16,6 @@ export class DeDebitoComponent implements OnInit{
   }
 
   ngOnInit() : void{
-
     this.cardsDebito = this.tarjetasService.cardsDebito;
   }
 
